@@ -19,21 +19,21 @@ const Index = () => {
       title: "Сборная России завоевала 5 медалей на международном турнире",
       date: "24 ноября 2025",
       category: "Соревнования",
-      image: "https://cdn.poehali.dev/projects/03cc3836-1e65-4348-9c74-7adeeab13959/files/61708f6a-366e-41ba-9b16-d22346f24820.jpg"
+      image: "https://cdn.poehali.dev/files/28a63087-760b-4581-a474-1301dd88f67e.jpg"
     },
     {
       id: 2,
       title: "Открыта регистрация на Чемпионат России 2025",
       date: "22 ноября 2025",
       category: "Объявления",
-      image: "https://cdn.poehali.dev/projects/03cc3836-1e65-4348-9c74-7adeeab13959/files/9d5c10a0-908f-4d08-b1e6-f9082ad44fb8.jpg"
+      image: "https://cdn.poehali.dev/files/91232ea9-faf9-4bb5-ad6a-c44ee14edb15.jpg"
     },
     {
       id: 3,
       title: "Новые правила проведения соревнований в 2026 году",
       date: "20 ноября 2025",
       category: "Правила",
-      image: "https://cdn.poehali.dev/projects/03cc3836-1e65-4348-9c74-7adeeab13959/files/61708f6a-366e-41ba-9b16-d22346f24820.jpg"
+      image: "https://cdn.poehali.dev/files/28a63087-760b-4581-a474-1301dd88f67e.jpg"
     }
   ];
 
@@ -49,20 +49,23 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <header className="fixed top-0 w-full bg-secondary/95 backdrop-blur-sm z-50 border-b border-primary/20">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-white font-heading text-xl font-bold">ФКР</span>
-            </div>
+          <a href="/" className="flex items-center gap-3">
+            <img 
+              src="https://cdn.poehali.dev/files/f8350d4e-841e-4b9d-92c9-e56a9c45d78f.png" 
+              alt="ФКР Logo"
+              className="w-14 h-14 object-contain"
+            />
             <div>
               <h1 className="text-white font-heading text-xl font-bold">Федерация Карате России</h1>
               <p className="text-white/70 text-sm">IKO</p>
             </div>
-          </div>
+          </a>
           <nav className="hidden md:flex items-center gap-6">
             <a href="#competitions" className="text-white hover:text-primary transition-colors">Соревнования</a>
             <a href="#ratings" className="text-white hover:text-primary transition-colors">Рейтинги</a>
             <a href="#news" className="text-white hover:text-primary transition-colors">Новости</a>
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+            <a href="/media" className="text-white hover:text-primary transition-colors">Медиа</a>
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white" onClick={() => window.location.href='/dashboard'}>
               Личный кабинет
             </Button>
           </nav>
